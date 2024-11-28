@@ -6,29 +6,35 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+h2, h3 {
+    font-weight: 600;
 }
 
 /* Header */
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
     position: sticky;
     top: 0;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
     z-index: 100;
 }
 
-.header h1 {
-    margin-bottom: 10px;
+.header .logo h1 {
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .header nav ul {
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -48,12 +54,22 @@ body {
     background-color: #ff6347;
 }
 
+/* Search Bar */
+.search-bar input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 20px;
+    width: 250px;
+}
+
 /* Hero Section */
 .hero-section {
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    padding: 50px 0;
-    text-align: center;
+    padding: 100px 0;
     color: white;
+    text-align: center;
+    position: relative;
 }
 
 .hero-content h2 {
@@ -69,10 +85,11 @@ body {
 .hero-content .btn {
     background-color: #ff6347;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .hero-content .btn:hover {
@@ -81,7 +98,7 @@ body {
 
 /* Product Section */
 .products-section {
-    padding: 40px 10%;
+    padding: 60px 10%;
     text-align: center;
 }
 
@@ -97,9 +114,11 @@ body {
     background-color: #ff6347;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 12px 20px;
+    margin: 0 15px;
     cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
 .filter-section button:hover {
@@ -108,16 +127,17 @@ body {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .product {
     background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .product:hover {
@@ -126,8 +146,9 @@ body {
 
 .product-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
+    border-radius: 10px;
     transition: opacity 0.3s ease;
 }
 
@@ -136,13 +157,14 @@ body {
 }
 
 .product h3 {
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 22px;
+    margin: 15px 0;
 }
 
 .product p {
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
+    margin-bottom: 20px;
 }
 
 .add-to-cart {
@@ -152,6 +174,8 @@ body {
     border: none;
     width: 100%;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
@@ -159,34 +183,20 @@ body {
     background-color: #e55347;
 }
 
-/* Cart Modal */
-.cart-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    justify-content: center;
-}
-
-.cart-modal-content {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-}
-
-.close-modal {
+.quick-view {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
+}
+
+.quick-view:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Footer */
