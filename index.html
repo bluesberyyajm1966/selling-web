@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopX - Premium Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section with Sticky Navigation -->
+    <header class="header">
+        <h1>ShopX</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart-btn" id="cart-link" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Smooth Animation -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h2>Welcome to ShopX</h2>
+            <p>Your go-to store for premium fashion.</p>
+            <a href="#products" class="btn btn-hero">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Product Section with Filters and Sorting -->
+    <section id="products" class="products-section">
+        <h2>Our Products</h2>
+        <div class="filter-section">
+            <button id="sort-price">Sort by Price</button>
+            <button id="sort-popularity">Sort by Popularity</button>
+        </div>
+        <div class="product-grid">
+            <!-- Example Product 1 -->
+            <div class="product" data-id="1">
+                <img src="images/product1.jpg" alt="Classic T-Shirt" class="product-image">
+                <h3>Classic T-Shirt</h3>
+                <p>$25.00</p>
+                <button class="add-to-cart" data-id="1" data-name="Classic T-Shirt" data-price="2500">Add to Cart</button>
+            </div>
+            <!-- Example Product 2 -->
+            <div class="product" data-id="2">
+                <img src="images/product2.jpg" alt="Stylish Jacket" class="product-image">
+                <h3>Stylish Jacket</h3>
+                <p>$55.00</p>
+                <button class="add-to-cart" data-id="2" data-name="Stylish Jacket" data-price="5500">Add to Cart</button>
+            </div>
+            <!-- More Products Here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out.</p>
+        <form action="#" method="post">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Cart Modal (Popup) -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Your Cart</h3>
+            <div id="cart-items-list">
+                <!-- Cart items will appear here dynamically -->
+            </div>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button id="checkout-btn" class="btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 ShopX - All Rights Reserved</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+</html>
